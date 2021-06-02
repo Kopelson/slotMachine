@@ -59,15 +59,12 @@ function checkPayLines(){
     //checks top line
     if (document.getElementById('top-reel-1').innerText === document.getElementById('top-reel-2').innerText && 
         document.getElementById('top-reel-1').innerText === document.getElementById('top-reel-3').innerText ) {
-        console.log("You Win!");
         payWinningsSymbols(document.getElementById('top-reel-1').innerText, document.getElementById('top-reel-2').innerText, document.getElementById('top-reel-3').innerText)
     //checks center line
     } else if(document.getElementById('center-reel-1').innerText === document.getElementById('center-reel-2').innerText && document.getElementById('center-reel-1').innerText === document.getElementById('center-reel-3').innerText) {
-        console.log("You Win!");
         payWinningsSymbols(document.getElementById('center-reel-1').innerText, document.getElementById('center-reel-2').innerText, document.getElementById('center-reel-3').innerText)
     //checks bottom line
     } else if(document.getElementById('bottom-reel-1').innerText === document.getElementById('bottom-reel-2').innerText && document.getElementById('bottom-reel-1').innerText === document.getElementById('bottom-reel-3').innerText) {
-        console.log("You Win!");
         payWinningsSymbols(document.getElementById('bottom-reel-1').innerText, document.getElementById('bottom-reel-2').innerText, document.getElementById('bottom-reel-3').innerText)
     //checks for cherry's
     } else if (
@@ -83,7 +80,6 @@ function checkPayLines(){
         document.getElementById('bottom-reel-2').innerText === "🍒" ||
         document.getElementById('bottom-reel-3').innerText === "🍒"
         ) {
-            console.log("You Win!");
             let cherry = "";
            
                 if(document.getElementById('top-reel-1').innerText === "🍒" ){
@@ -115,7 +111,6 @@ function checkPayLines(){
                 if(document.getElementById('bottom-reel-3').innerText === "🍒" ){
                     cherry = cherry + "🍒";
                 }     
-                console.log(cherry);
                 payCherry(cherry);
     } else {
         console.log("You Lose!");
@@ -123,9 +118,7 @@ function checkPayLines(){
 }
 //pays for 3 of a kind wins
 function payWinningsSymbols (a, b, c) {
-    console.log(`${a} ${b} ${c}`);
-    console.log(payout[`${a} ${b} ${c}`] * multi);
-    document.getElementById('pay').innerText = payout[`${a} ${b} ${c}`];
+    document.getElementById('pay').innerText = payout[`${a} ${b} ${c}`] * multi;
     credits = credits + (payout[`${a} ${b} ${c}`] * multi);
     document.getElementById('credits').innerText = credits
 }
@@ -139,7 +132,6 @@ function payCherry(cherry){
 function changeBetSize(size, times){
     bet = size;
     multi = times;
-    console.log(`${bet} ${multi}`);
     document.getElementById('betAmount').innerText = bet;
 
 }
