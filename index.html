@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="https://emojiguide.org/images/emoji/q/6b4mcz1gat0aq.png">
+        <title>Slot Machine</title>
+        <link rel="stylesheet" href="./reset.css" />
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Casino - Slot Machine</h1> 
+        </header>
+        <main>
+            <div id="machine">
+                <div class="slotMachine" id="lucky-Machine-Title">
+                    <h2>Wild Cherry Slot's</h2>
+                </div>
+                <div class="slotMachine" id="lucky-Machine">
+                    <div class="reel" id="reel-1">
+                        <div id="top-reel-1">
+                            <p>🍒</p>
+                        </div>
+                        <div id="center-reel-1">
+                            <p>🍒</p>
+                        </div>
+                        <div id="bottom-reel-1">
+                            <p>🍒</p>
+                        </div>
+                    </div>
+                    <div class="reel" id="reel-2">
+                        <div id="top-reel-2">
+                            <p>🍒</p>
+                        </div>
+                        <div id="center-reel-2">
+                            <p>🍒</p>
+                        </div>
+                        <div id="bottom-reel-2">
+                            <p>🍒</p>
+                        </div>
+                    </div>
+                    <div class="reel" id="reel-3">
+                        <div id="top-reel-3">
+                            <p>🍒</p>
+                        </div>
+                        <div id="center-reel-3">
+                            <p>🍒</p>
+                        </div>
+                        <div id="bottom-reel-3">
+                            <p>🍒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slotMachine" id="lucky-Machine-Sats">
+                    <div class="slotMachineStats">
+                        <h2>Credits: </h2>
+                            <h2 id="credits">1000</h2>
+                    </div>
+                    <div class="slotMachineStats">
+                        <h2>Payout: </h2>
+                        <h2 id="pay">0</h2>
+                    </div>
+                    <div class="slotMachineStats">
+                        <div class="slotMachineStats">
+                            <span class="button bet betButtonSize" onclick="changeBetSize(25, 1)">Bet 1 (1X)</span>
+                            <span class="button bet betButtonSize" onclick="changeBetSize(50, 2)">Bet 2 (2X)</span>
+                            <span class="button bet betButtonSize" onclick="changeBetSize(75, 3)">Bet 3 (3X)</span>
+                            <span class="button bet betButtonSize" onclick="changeBetSize(100, 4)">Bet Max (4X)</span>
+                        </div>
+                        <div class="button bet spinButtonSize" onclick="spinReels()">
+                            <h2>BET</h2>
+                            <p id="betAmount">25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table id="payout">
+                <thead>
+                    <tr>
+                        <th>Symbol</th> 
+                        <th>Payout</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🍒🍒🍒</td>
+                        <td>50,000</td>
+                    </tr>
+                    <tr>
+                        <td>(777) (777) (777)</td>
+                        <td>25,000</td>
+                    </tr>
+                    <tr>
+                        <td>(77) (77) (77)</td>
+                        <td>10,000</td>
+                    </tr>
+                    <tr>
+                        <td>🍒🍒</td>
+                        <td>2,500</td>
+                    </tr>
+                    <tr>
+                        <td>7 7 7</td>
+                        <td>1,000</td>
+                    </tr>
+                    <tr>
+                        <td>A A A</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>K K K</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>Q Q Q</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>J J J</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>🍒</td>
+                        <td>25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <small>🍒 Casino 2021 🍒</small>
+        </footer>
+        <script src="slot.js"></script>
+    </body>
+</html>
